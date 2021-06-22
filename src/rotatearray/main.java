@@ -1,0 +1,24 @@
+package rotatearray;
+
+import java.util.Arrays;
+
+public class main {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4, 5, 6, 7};
+        int k = 3;
+        rotate(arr, k);
+    }
+
+    public static void rotate(int[] nums, int k) {
+
+            for (int i = 0; i < nums.length; i++) {
+                int temp = nums[i];
+                nums[i] = nums[nums.length - 1];
+                nums[nums.length - 1] = temp;
+            }
+
+
+    }
+}
+
+
