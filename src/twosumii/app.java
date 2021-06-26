@@ -1,4 +1,4 @@
-package twosum;
+package twosumii;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -6,10 +6,9 @@ import java.util.Map;
 
 public class app {
     public static void main(String[] args) {
-        int[] nums = {2, 3, 4, 5, 7, 11, 15};
-        int[] nums2 = {3, 2, 4};
-        int target2 = 6;
-        int target = 10;
+        int[] nums = {2,3,4};
+
+        int target = 6;
         System.out.println((Arrays.toString(twoSum(nums, target))));
     }
 
@@ -18,9 +17,9 @@ public class app {
 
             for (int i = 0; i < nums.length; i++) {
                 if (map.containsKey(target - nums[i])) {
-                    return new int[]{map.get(target - nums[i]), i};
+                    return new int[]{map.get(target - nums[i]), i+1};
                 }
-                map.put(nums[i], i);
+                map.put(nums[i], i+1);
             }
             throw new IllegalArgumentException("no match found");
         }
