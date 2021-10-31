@@ -21,6 +21,41 @@ public class main {
         }
         System.out.println(Arrays.toString(arr));
     }
+    public void duplicateZeros2.(int[] arr) {
+        int z = 0;
+        for(int a:arr){
+            if(a==0){
+                z++;
+            }
+        }
+
+        int n = arr.length;
+
+        for(int i=n-1; i>=0 ;i--){
+
+            if(i+z<arr.length){
+                arr[i+z]=arr[i];
+
+            }
+
+            if(arr[i]==0){
+                z-=1;
+                if(i+z<arr.length){
+                    arr[i+z]=arr[i];
+
+                }
+
+            }
+
+
+        }
+
+        System.out.print(Arrays.toString(arr));
+
+    }
+
+
 }
+
 
 
