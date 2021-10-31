@@ -14,34 +14,35 @@ public class main {
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] == 0) {
                 for (int j = arr.length - 1; j > i; j--) {
-                    arr[j] = arr[j-1];
+                    arr[j] = arr[j - 1];
                 }
                 i++;
             }
         }
         System.out.println(Arrays.toString(arr));
     }
-    public void duplicateZeros2.(int[] arr) {
+
+    public void duplicateZeros2(int[] arr) {
         int z = 0;
-        for(int a:arr){
-            if(a==0){
+        for (int a : arr) {
+            if (a == 0) {
                 z++;
             }
         }
 
         int n = arr.length;
 
-        for(int i=n-1; i>=0 ;i--){
+        for (int i = n - 1; i >= 0; i--) {
 
-            if(i+z<arr.length){
-                arr[i+z]=arr[i];
+            if (i + z < arr.length) {
+                arr[i + z] = arr[i];
 
             }
 
-            if(arr[i]==0){
-                z-=1;
-                if(i+z<arr.length){
-                    arr[i+z]=arr[i];
+            if (arr[i] == 0) {
+                z -= 1;
+                if (i + z < arr.length) {
+                    arr[i + z] = arr[i];
 
                 }
 
